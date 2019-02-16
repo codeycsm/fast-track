@@ -1,0 +1,23 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "Fast Track",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-triple-equals-turd/Project-2.git"
+  },
+  "keywords": [
+    "Fast",
+    "Track"
+  ],
+  "author": "js-triple-equals-turd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/js-triple-equals-turd/Project-2/issues"
+  },
+  "homepage": "https://github.com/js-triple-equals-turd/Project-2#readme"
+}
