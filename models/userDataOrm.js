@@ -9,4 +9,5 @@ module.exports = function(sequelize, DataTypes) {
     endTime: DataTypes.DATE,
     totalTime: DataTypes.DECIMAL
   });
+  return pastFast;
 };
