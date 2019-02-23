@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     totalTime: DataTypes.DECIMAL
   });
   PastFast.associate = function(models) {
-    models.PastFast.belongsTo(models.CurrentFast, {
+    models.PastFast.belongsTo(models.User, {
       onDelete: "CASCADE",
       foreignKey: {
         allowNull: false
