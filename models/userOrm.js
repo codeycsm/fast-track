@@ -1,11 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
-  let CurrentFast = sequelize.define("CurrentFast", {
+  let User = sequelize.define("User", {
     username: DataTypes.STRING,
-    password: DataTypes.STRING,
     startTime: DataTypes.DATE
   });
-  CurrentFast.associate = function(models) {
-    models.CurrentFast.hasMany(models.PastFast);
+  User.associate = function(models) {
+    models.User.hasMany(models.PastFast);
   };
-  return CurrentFast;
+  return User;
 };
