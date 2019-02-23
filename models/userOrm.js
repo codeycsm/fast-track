@@ -1,14 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
-  let Fast = sequelize.define("Fast", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
+  let CurrentFast = sequelize.define("CurrentFast", {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
-    startTime: DataTypes.DATE,
-    endTime: DataTypes.DATE
+    startTime: DataTypes.DATE
   });
-  return Fast;
+  CurrentFast.associate = function(models) {
+    models.CurrentFast.hasMany(models.PastFast);
+  };
+  return CurrentFast;
 };

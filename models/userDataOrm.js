@@ -1,13 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-  let pastFast = sequelize.define("pastFast", {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
+  "use strict";
+  let PastFast = sequelize.define("PastFast", {
     startTime: DataTypes.DATE,
     endTime: DataTypes.DATE,
     totalTime: DataTypes.DECIMAL
   });
-  return pastFast;
+  PastFast.associate = function(models) {
+    models.PastFast.belongsTo(models.CurrentFast, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return PastFast;
 };
