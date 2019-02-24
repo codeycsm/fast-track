@@ -6,10 +6,7 @@
 // DEPENDENCIES
 // ==========================================
 var express = require("express");
-// var methodOverride = require("method-override");
-// var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-let sequelize = require("sequelize");
 let db = require("./models");
 // ==========================================
 
@@ -34,9 +31,8 @@ app.set("view engine", "handlebars");
 // ==========================================
 app.use(express.static(__dirname + "/public"));
 
-// app.use(methodOverride("_method"));
-
-// require("./controllers/")(app);
+require("./routes/apiRoutes.js");
+require("./routes/htmlRoutes.js");
 // ==========================================
 // Database sync & port listening.
 // ==========================================
