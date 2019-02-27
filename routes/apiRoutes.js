@@ -13,7 +13,7 @@ router.post("/new-user", function(req, res) {
   db.User.count({
     where: { username: newUser }
   }).then(function(count) {
-    // If the count is 0 there is no existing username
+    // If the count is 0 the new user will be created.
     if (count === 0) {
       // Creates a new user with users input
       db.User.create({
@@ -25,7 +25,8 @@ router.post("/new-user", function(req, res) {
           id: newUser.dataValues.id
         };
         // Redirects the user to the index page
-        res.redirect("/", user);
+        res.send(user);
+        // res.redirect("/", user);
       });
     } else {
       // If the username exists in the database return true.
