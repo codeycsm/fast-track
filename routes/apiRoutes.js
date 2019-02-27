@@ -26,7 +26,6 @@ router.post("/new-user", function(req, res) {
         };
         // Redirects the user to the index page
         res.send(user);
-        // res.redirect("/", user);
       });
     } else {
       // If the username exists in the database return true.
