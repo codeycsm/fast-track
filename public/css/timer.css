@@ -1,0 +1,7 @@
+.timer-container {
+    height: 100px;
+    background-color: grey;
+    margin-top: calc(25% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+}
