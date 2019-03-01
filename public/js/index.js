@@ -19,6 +19,7 @@ $(document).ready(function() {
           $("#signupStatus").append("This username already exists.");
         } else {
           // storage(results);
+          window.location = "/timer";
         }
       });
     }
@@ -41,6 +42,8 @@ $(document).ready(function() {
           $("#signinStatus").append("This username was not found.");
         } else {
           // storage(results);
+
+          window.location = "/timer";
         }
       });
     }
