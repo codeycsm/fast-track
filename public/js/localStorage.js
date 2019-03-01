@@ -1,3 +1,3 @@
-function storage(data) {
-  localStorage.setItem("fasting_calculator", JSON.stringify(data));
+function saveUser(data) {
+  localStorage.setItem("fast_track", JSON.stringify(data));
 }

@@ -3,7 +3,28 @@ let express = require("express");
 let router = express.Router();
 let db = require("../models");
 
-router.post("/new-user", function(req, res) {
+// Sign in route
+router.post("/sign-in", function(req, res) {
+  let username = req.body.username;
+  let isFound = false;
+  db.User.count({
+    where: { username: username }
+  }).then(function(data) {
+    if (data === 0) {
+      res.send(isFound);
+    } else {
+      db.User.findAll({
+        where: { username: username }
+      }).then(function(result) {
+        let user = result[0];
+        res.send(user);
+      });
+    }
+  });
+});
+
+// Sign up route
+router.post("/sign-up", function(req, res) {
   console.log(`posted new user: ${req.body.username}`);
   // new username
   let newUser = req.body.username;
