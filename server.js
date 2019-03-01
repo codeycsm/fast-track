@@ -1,13 +1,11 @@
 // ==========================================
-// COPIED FROM ANOTHER PROJECT NEEDS TWERK
-// ==========================================
-
-// ==========================================
 // DEPENDENCIES
 // ==========================================
 var express = require("express");
 var exphbs = require("express-handlebars");
 let db = require("./models");
+let htmlRoutes = require("./routes/htmlRoutes");
+let apiRoutes = require("./routes/apiRoutes");
 // ==========================================
 
 // ==========================================
@@ -29,15 +27,15 @@ app.set("view engine", "handlebars");
 // ==========================================
 // ROUTES SETUP
 // ==========================================
-app.use(express.static(__dirname + "/public"));
 
-require("./routes/apiRoutes.js");
-require("./routes/htmlRoutes.js");
+app.use(htmlRoutes);
+app.use(apiRoutes);
+app.use(express.static(__dirname + "/public"));
 // ==========================================
 // Database sync & port listening.
 // ==========================================
 db.sequelize.sync().then(function() {
   app.listen(port, function() {
-    console.log(`Server listening on: http://localhost:${port}`);
+    console.log(`Server listening on: http://localhost:${port}/`);
   });
 });

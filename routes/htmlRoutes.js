@@ -1,3 +1,10 @@
 // HTML Routes
 let express = require("express");
-console.log("HTML routes connected");
+let router = express.Router();
+let db = require("../models");
+
+router.get("/", function(req, res) {
+  res.render("index");
+});
+
+module.exports = router;
