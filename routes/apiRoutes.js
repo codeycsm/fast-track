@@ -42,10 +42,9 @@ router.post("/sign-up", function(req, res) {
       }).then(function(newUser) {
         // new users id and username
         let user = {
-          name: newUser.dataValues.username,
+          username: newUser.dataValues.username,
           id: newUser.dataValues.id
         };
-        // Redirects the user to the index page
         res.send(user);
       });
     } else {
