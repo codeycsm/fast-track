@@ -1,6 +1,18 @@
 #signinModal,
 #signupModal {
-  width: 25em;
+  width: 45vw;
+  padding-bottom: 0.5em;
   margin-left: auto;
   margin-right: auto;
+}
+
+#signinModal h1,
+#signupModal h1 {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+#signinModal button,
+#signupModal button {
+  margin-top: 0.5em;
 }

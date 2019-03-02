@@ -1,13 +1,13 @@
 $(document).ready(function() {
-  // $("#signupModal").hide();
-  // $("#signinModal").hide();
-  // let foundUser = findUser();
-  // if (foundUser) {
-  //   window.location = "/timer";
-  // } else {
-  //   $("#signinModal").show();
-  // }
-  // sign up click function
+  $("#signupModal").hide();
+  $("#signinModal").hide();
+  let foundUser = findUser();
+  if (foundUser) {
+    window.location = "/timer";
+  } else {
+    $("#signinModal").show();
+  }
+  //sign up click function
   $("#signupSubmit").on("click", function() {
     $("#signinStatus").empty();
     $("#signupStatus").empty();
@@ -25,8 +25,6 @@ $(document).ready(function() {
           $("#signupStatus").append("This username already exists.");
         } else {
           saveUser(result);
-          findUser();
-          window.location = "/timer";
         }
       });
     }
@@ -49,16 +47,16 @@ $(document).ready(function() {
           $("#signinStatus").append("This username was not found.");
         } else {
           saveUser(results);
-          findUser();
-          window.location = "/timer";
         }
       });
     }
   });
+
   $("#sign-in").on("click", function() {
     $("#signinModal").show();
     $("#signupModal").hide();
   });
+
   $("#sign-up").on("click", function() {
     $("#signupModal").show();
     $("#signinModal").hide();

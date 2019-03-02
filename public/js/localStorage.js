@@ -4,8 +4,7 @@ function saveUser(data) {
     username: data.username
   };
   localStorage.setItem("fastTrack", JSON.stringify(user));
-  // localStorage.setItem("fastingId", JSON.stringify(data.id));
-  console.log(`Save user function data ${user}`);
+  window.location = "/timer";
 }
 
 function findUser() {
@@ -15,4 +14,9 @@ function findUser() {
   } else {
     return true;
   }
+}
+
+function signOut() {
+  localStorage.removeItem("fastTrack");
+  window.location = "/";
 }
