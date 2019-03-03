@@ -4,7 +4,6 @@ function saveUser(data) {
     username: data.username
   };
   localStorage.setItem("fastTrack", JSON.stringify(user));
-  window.location = "/timer";
 }
 
 function findUser() {
