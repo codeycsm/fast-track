@@ -56,4 +56,22 @@ router.post("/sign-up", function(req, res) {
   });
 });
 
+router.post("/current-fast", function(req, res) {
+  db.User.update(
+    {
+      startTime: req.body.startTime,
+      endTime: req.body.endTime
+    },
+    {
+      where: {
+        id: req.body.id
+     }
+    }
+  ).then(function(user) {
+    res.json(user);
+ });
+});
+
+
+
 module.exports = router;
