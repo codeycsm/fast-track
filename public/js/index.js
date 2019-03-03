@@ -28,6 +28,7 @@ $(document).ready(function() {
           $("#signupStatus").append("This username already exists.");
         } else {
           saveUser(result);
+          window.location = "/timer";
         }
       });
     }
@@ -50,6 +51,7 @@ $(document).ready(function() {
           $("#signinStatus").append("This username was not found.");
         } else {
           saveUser(results);
+          window.location = "/timer";
         }
       });
     }
