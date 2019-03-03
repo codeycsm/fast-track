@@ -11,12 +11,9 @@
     height: 100vh;
 }
 
-.timer-button {
-    background-color: #FF636D;
-}
-
 .custom-dropdown-header {
-    background-color: #F87D7B;
+    color: white;
+    background-color: #FF636D;
     border: none;
     margin-top: 30px;
 }
@@ -34,3 +31,57 @@
     color: white;
     margin-top: 30px;
 }
+
+.quick-buttons-row {
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+.input-field input[type=text] {
+    color: white;
+}
+
+.input-field label {
+    color: white;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: white !important;
+  }
+
+  .input-field input[type=text] {
+    border-bottom: 1px solid white !important;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+  }
+
+   /* valid color */
+   .input-field input[type=text].valid {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+  }
+
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: white !important;
+  }
+
+  .btn{
+    background-color: #FF636D;
+  }
+  .btn:visited{
+    background-color: #D04A73;
+  }
+  .btn:hover {
+    background-color: #F87D7B;
+  }
+  .btn:active{
+    background-color: #D04A73;
+  }
+  .btn:focus{
+    background-color: #D04A73;
+  }

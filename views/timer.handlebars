@@ -1,15 +1,35 @@
+<link rel="stylesheet" href="/css/timer.css">
+
 <div class="timer-body">
     <div class="valign-wrapper row">
         <div class="timer-container col s5">
             <h2 class="duration-header">Fast Duration</h2>
-            <div class="row" style="padding-left: 10px; padding-right: 10px;">
-                <button class="waves-effect waves-light btn col s6 timer-button">16 hr</button>
-                <button class="waves-effect waves-light btn col s6 timer-button">24 hr</button>
+            <div class="row quick-buttons-row">
+                <button class="waves-effect waves-light btn col s6">16 hr</button>
+                <button class="waves-effect waves-light btn col s6">24 hr</button>
             </div>
             <ul class="collapsible custom-dropdown">
                 <li>
                     <div class="collapsible-header custom-dropdown-header"><i class="material-icons">keyboard_arrow_down</i>Custom</div>
-                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-body custom-dropdown-body">
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="custom_min" type="text" class="validate">
+                                <label for="custom_min">Min</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="custom_hr" type="text">
+                                <label for="custom_hr">Hr</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="custom_day" type="text">
+                                <label for="custom_day">Day</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="waves-effect waves-light btn col s12">Start</button>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
