@@ -1,7 +1,36 @@
 .timer-container {
-    height: 100px;
-    background-color: grey;
-    margin-top: calc(25% - 100px);
+    background-color: #FCA464;
+    margin-top: calc(25% - 200px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.timer-body {
+    background-color: #D04A73;
+    width: 100vw;
+    height: 100vh;
+}
+
+.timer-button {
+    background-color: #FF636D;
+}
+
+.custom-dropdown-header {
+    background-color: #F87D7B;
+    border: none;
+    margin-top: 30px;
+}
+
+.custom-dropdown-body {
+    border: none;
+}
+
+.custom-dropdown {
+    border: none;
+    margin-bottom: 30px;
+}
+
+.duration-header {
+    color: white;
+    margin-top: 30px;
 }
