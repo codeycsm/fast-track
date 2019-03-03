@@ -9,7 +9,6 @@ function saveUser(data) {
 
 function findUser() {
   let user = localStorage.getItem("fastTrack");
-  console.log(user);
   if (!user) {
     return false;
   } else {

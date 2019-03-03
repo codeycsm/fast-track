@@ -55,4 +55,15 @@ router.post("/sign-up", function(req, res) {
   });
 });
 
+router.post("/past-data", function(req, res) {
+  let user = req.body.user;
+  db.PastFast.findAll({
+    where: {
+      UserId: user.id
+    }
+  }).then(function(data) {
+    res.send(data);
+  });
+});
+
 module.exports = router;
