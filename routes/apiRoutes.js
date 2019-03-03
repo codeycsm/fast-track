@@ -42,10 +42,9 @@ router.post("/sign-up", function(req, res) {
       }).then(function(newUser) {
         // new users id and username
         let user = {
-          name: newUser.dataValues.username,
+          username: newUser.dataValues.username,
           id: newUser.dataValues.id
         };
-        // Redirects the user to the index page
         res.send(user);
       });
     } else {
@@ -53,6 +52,17 @@ router.post("/sign-up", function(req, res) {
       isTaken = true;
       res.send(isTaken);
     }
+  });
+});
+
+router.post("/past-data", function(req, res) {
+  let user = req.body.user;
+  db.PastFast.findAll({
+    where: {
+      UserId: user.id
+    }
+  }).then(function(data) {
+    res.send(data);
   });
 });
 
