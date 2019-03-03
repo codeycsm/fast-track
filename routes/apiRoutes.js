@@ -55,7 +55,6 @@ router.post("/sign-up", function(req, res) {
   });
 });
 
-<<<<<<< HEAD
 router.post("/current-fast", function(req, res) {
   db.User.update(
     {
@@ -72,9 +71,6 @@ router.post("/current-fast", function(req, res) {
  });
 });
 
-
-
-=======
 router.post("/past-data", function(req, res) {
   let user = req.body.user;
   db.PastFast.findAll({
@@ -86,5 +82,4 @@ router.post("/past-data", function(req, res) {
   });
 });
 
->>>>>>> master
 module.exports = router;
