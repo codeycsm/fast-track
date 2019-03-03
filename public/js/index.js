@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  //Comment out these lines to view the signin/signup page
+  //==================================================
   $("#signupModal").hide();
   $("#signinModal").hide();
   let foundUser = findUser();
@@ -7,6 +9,7 @@ $(document).ready(function() {
   } else {
     $("#signinModal").show();
   }
+  //==================================================
   //sign up click function
   $("#signupSubmit").on("click", function() {
     $("#signinStatus").empty();
