@@ -31,6 +31,10 @@ function startFast(preset) {
     //use for testing
     // alert(`startTime: ${startTime} endTime: ${endTime}`);
 
+    if(endTime !== null) {
+        postFast(startTime, endTime);
+    }
+
 }
 
 function getCustomEnd(startTime) {
@@ -47,9 +51,20 @@ function getCustomEnd(startTime) {
 
     if(moment(startTime).diff(moment(endTime)) === 0) {
         alert('Please input a valid custom time');
+        endTime = null;
     }
-    else {
-        return endTime;
-    }
+    
+    return endTime;
 
+}
+
+function postFast (startTime, endTime) {
+    let data = {
+        id: 1,
+        startTime: startTime,
+        endTime: endTime
+    }
+    $.post('/current-fast', data, function (data) {
+        console.log(data);
+    });
 }
