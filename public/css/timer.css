@@ -1,6 +1,6 @@
 .timer-container {
     background-color: #FCA464;
-    margin-top: calc(25% - 200px);
+    margin-top: 15rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -35,6 +35,12 @@
 .quick-buttons-row {
     padding-left: 10px; 
     padding-right: 10px;
+}
+
+.custom-icon {
+  color:white;
+  margin-top: 2.1rem;
+  cursor: pointer;
 }
 
 .input-field input[type=text] {

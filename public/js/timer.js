@@ -14,6 +14,14 @@ $(document).ready(function() {
         startFast();
     });
 
+    $("#logout").on("click", function() {
+        signOut();
+    });
+
+    $("#assessment").on("click", function() {
+        window.location = '/fast-data';
+    });
+
 });
 
 function startFast(preset) {
