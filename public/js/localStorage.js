@@ -15,6 +15,10 @@ function findUser() {
   }
 }
 
+function getUser() {
+  return JSON.parse(localStorage.getItem("fastTrack"));
+}
+
 function signOut() {
   localStorage.removeItem("fastTrack");
   window.location = "/";

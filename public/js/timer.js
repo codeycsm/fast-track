@@ -59,12 +59,17 @@ function getCustomEnd(startTime) {
 }
 
 function postFast (startTime, endTime) {
+
+    user = getUser();
+
     let data = {
-        id: 1,
-        startTime: startTime,
-        endTime: endTime
+        id: user.id,
+        startTime: moment(startTime).toString(),
+        endTime: moment(endTime).toString()
     }
+
     $.post('/current-fast', data, function (data) {
         console.log(data);
     });
+
 }
