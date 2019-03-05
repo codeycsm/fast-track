@@ -1,0 +1,18 @@
+#fastDataUsername {
+  background-color: #03a9f4;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+#dataHeader {
+  padding: 1em;
+  margin-top: 2em;
+  background-color: #1de9b6;
+}
+
+#pastData:nth-type-of(odd) {
+  background-color: #e3f2fd;
+}
+
+#pastData:nth-type-of(even) {
+  background-color: #e8eaf6;
+}

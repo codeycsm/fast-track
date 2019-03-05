@@ -10,7 +10,7 @@ if (foundUser) {
   }).then(function(result) {
     for (let i = 0; i < result.length; i++) {
       $("#fastData").append(`
-        <div class="row">
+        <div class="row pastData">
           <div class="col s4 center-align">
             ${moment(result[i].startTime).format("M/D/Y h:mm:ss a")}
           </div>
@@ -21,7 +21,7 @@ if (foundUser) {
             ${moment(result[i].endTime).diff(
               moment(result[i].startTime),
               "hours"
-            )} Hours
+            )} hour(s)
           </div>
         </div>
       `);
