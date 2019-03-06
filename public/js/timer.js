@@ -115,9 +115,7 @@ function postToPrevious (start, end, duration) {
 function startFastTimer () {
     
     $('#scheduler').hide();
-
     $('#header').text('Current Fast');
-
     $('#timer').show();
 
     fasting = true;
@@ -152,7 +150,6 @@ function endFast() {
     duration = formatTime(durationMili);
 
     $('#end_fast').html('Start new fast');
-
     $('#time_left').text(`You fasted for ${duration}`);
 
     postToPrevious(moment(startTime).toString(), moment(endTime).toString(), durationMili);
