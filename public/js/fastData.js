@@ -18,10 +18,9 @@ if (foundUser) {
             ${moment(result[i].endTime).format("M/D/Y h:mm:ss a")}
           </div>
           <div class="col s4 center-align">
-            ${moment(result[i].endTime).diff(
-              moment(result[i].startTime),
-              "hours"
-            )} Hours
+            ${formatTime(moment(result[i].endTime).diff(
+              moment(result[i].startTime))
+            )}
           </div>
         </div>
       `);
