@@ -36,3 +36,7 @@ $(document).ready(function() {
     signOut();
   });
 });
+
+$("#timerButton").on("click", function() {
+  window.location = "/timer";
+});
