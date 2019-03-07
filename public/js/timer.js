@@ -1,4 +1,11 @@
 
+if(!isLoggedIn()) {
+    window.location = '/';
+}
+else {
+    $("#timer-container").show();
+}
+
 let startTime;
 let endTime;
 let interval;
