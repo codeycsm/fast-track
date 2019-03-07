@@ -1,25 +1,27 @@
 .timer-container {
-    background-color: #FCA464;
+    background-color: #4B6478;
     margin-top: 12rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 .timer-body {
-    background-color: #D04A73;
+    background-color: #041B29;
     width: 100vw;
     height: 100vh;
 }
 
 .custom-dropdown-header {
-    color: white;
-    background-color: #FF636D;
+    color: #D9E7F0;
+    background-color: #D60042;
     border: none;
     margin-top: 30px;
+    margin-bottom: 35px;
 }
 
 .custom-dropdown-body {
     border: none;
+    margin-bottom: 35px;
 }
 
 .custom-dropdown {
@@ -28,8 +30,8 @@
 }
 
 .duration-header {
-    color: white;
-    margin-top: 30px;
+    color: #D9E7F0;
+    margin-top: 35px;
 }
 
 .quick-buttons-row {
@@ -38,7 +40,7 @@
 }
 
 .custom-icon {
-  color:white;
+  color: #D9E7F0;
   margin-top: 2.1rem;
   cursor: pointer;
 }
@@ -52,55 +54,6 @@
 }
 
 .display-time {
-  color: white;
+  color: #D9E7F0;
   margin-top: 0 !important;
 }
-
-.input-field input[type=text] {
-    color: white;
-}
-
-.input-field label {
-    color: white;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
-    color: white !important;
-  }
-
-  .input-field input[type=text] {
-    border-bottom: 1px solid white !important;
-  }
-
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 1px solid white !important;
-    box-shadow: 0 1px 0 0 white !important;
-  }
-
-   /* valid color */
-   .input-field input[type=text].valid {
-    border-bottom: 1px solid white !important;
-    box-shadow: 0 1px 0 0 white !important;
-  }
-
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: white !important;
-  }
-
-  .btn{
-    background-color: #FF636D;
-  }
-  .btn:visited{
-    background-color: #D04A73;
-  }
-  .btn:hover {
-    background-color: #F87D7B;
-  }
-  .btn:active{
-    background-color: #D04A73;
-  }
-  .btn:focus{
-    background-color: #D04A73;
-  }
