@@ -2,7 +2,7 @@
 let express = require("express");
 let router = express.Router();
 let db = require("../models");
-
+let passport = require("passport-local");
 // Sign in route
 router.post("/sign-in", function(req, res) {
   let username = req.body.username;
@@ -56,7 +56,6 @@ router.post("/sign-up", function(req, res) {
 });
 
 router.post("/current-fast", function(req, res) {
-
   db.User.update(
     {
       startTime: req.body.startTime ? req.body.startTime : null,
@@ -65,11 +64,11 @@ router.post("/current-fast", function(req, res) {
     {
       where: {
         id: req.body.id
-     }
+      }
     }
   ).then(function(user) {
     res.json(user);
- });
+  });
 });
 
 router.post("/past-data", function(req, res) {
@@ -83,17 +82,15 @@ router.post("/past-data", function(req, res) {
   });
 });
 
-router.post('/past-fast', function(req, res) {
-
+router.post("/past-fast", function(req, res) {
   db.PastFast.create({
     startTime: req.body.startTime,
     endTime: req.body.endTime,
     totalTime: req.body.totalTime,
     UserId: req.body.UserId
-  }).then(function(data){
+  }).then(function(data) {
     res.json(data);
   });
-
 });
 
 module.exports = router;
