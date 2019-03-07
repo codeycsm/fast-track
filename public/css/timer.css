@@ -93,14 +93,14 @@
     background-color: #D60042;
   }
   .btn:visited{
-    background-color: #D04A73;
+    background-color: rgb(165, 0, 52);
   }
   .btn:hover {
-    background-color: #F87D7B;
+    background-color: rgb(255, 0, 81);
   }
   .btn:active{
-    background-color: #D04A73;
+    background-color: rgb(165, 0, 52);
   }
   .btn:focus{
-    background-color: #D04A73;
+    background-color: rgb(165, 0, 52);
   }

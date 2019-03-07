@@ -60,6 +60,7 @@ function startFast(preset) {
 
 function getCustomEnd(start) {
 
+
     let min = $('#custom_min').val().trim();
     let hr = $('#custom_hr').val().trim();
     let day = $('#custom_day').val().trim();
@@ -71,6 +72,7 @@ function getCustomEnd(start) {
     end = moment(end).add(day, 'd');
 
     if(moment(start).diff(moment(end)) === 0) {
+        //todo: add modal for invalid time
         alert('Please input a valid custom time');
         end = null;
     }
