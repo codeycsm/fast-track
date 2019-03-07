@@ -1,29 +1,44 @@
 <link rel="stylesheet" href="/css/index.css">
 
-<div class="container">
-   <div class="row">
-      <div id="signinModal" class="center-align z-depth-3">
-         <h1 class="blue darken-1">Sign In</h1>
-         <p id="signinStatus"></p>
-         <form action="" method="">
-            <input type="text" id="signinUsername" placeholder="Enter your Username">
-            <button type="button" id="signinSubmit" class="btn">Sign in</button>
-         </form>
-         <p>OR <br><button id="sign-up" class="btn">Sign Up</button></p>
+<div id="signInContainer" class="valign-wrapper row">
+   <div id="signinModal" class="center-align col xl5 l6 m9 s12">
+      <div class="row">
+         <h1 class="col s12">Sign In</h1>
       </div>
-   </div>
-   <div class="row">
-      <div id="signupModal" class="center-align z-depth-3">
-         <h1 class="blue">Sign Up</h1>
-         <p id="signupStatus"></p>
-         <form action="" method="">
-            <input type="text" id="signupUsername" placeholder="Enter a username here">
-            <button type="button" id="signupSubmit" class="btn">Sign Up</button>
-         </form>
-         <p>OR <br><button id="sign-in" class="btn">Sign In</button></p>
-      </div>
+      <p id="signinStatus"></p>
+         <div class="row">
+               <div class="input-field col s12">
+               <input type="text" id="signinUsername">
+               <label for="signinUsername">Enter your nickname</label>
+            </div>
+         </div>
+         <div class="row signInButtonContainer">
+            <button type="button" id="signinSubmit" class="btn col s12">Sign in</button>
+         </div>
+         <div class="row makeNickname">
+            <h6 id="sign-up" class="makeNicknameText">Don't have a nickname? Make one!</h6>
+         </div>
    </div>
 </div>
+<div id="signUpContainer" class="valign-wrapper row" style="display: none;">
+   <div id="signupModal" class="center-align col xl5 l6 m9 s12">
+      <h1>Sign Up</h1>
+      <p id="signinStatus"></p>
+         <div class="row">
+               <div class="input-field col s12">
+               <input class="validate" type="text" id="signupUsername">
+               <label for="signupUsername">Pick a clever nickname</label>
+            </div>
+         </div>
+         <div class="row signInButtonContainer">
+            <button type="button" id="signupSubmit" class="btn col s12">Sign up</button>
+         </div>
+         <div class="row makeNickname">
+            <h6 id="sign-in" class="makeNicknameText">Have a nickname? Sign in!</h6>
+         </div>
+   </div>
+</div>
+
 <script src="/js/index.js"></script>
 
 {{!-- change bottom buttons on modals to plain text --}}

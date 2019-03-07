@@ -1,15 +1,9 @@
+let foundUser = findUser();
+if (foundUser) {
+  window.location = "/timer";
+}
+
 $(document).ready(function() {
-  //Comment out these lines to view the signin/signup page
-  //==================================================
-  $("#signupModal").hide();
-  $("#signinModal").hide();
-  let foundUser = findUser();
-  if (foundUser) {
-    window.location = "/timer";
-  } else {
-    $("#signinModal").show();
-  }
-  //==================================================
   //sign up click function
   $("#signupSubmit").on("click", function() {
     $("#signinStatus").empty();
@@ -58,12 +52,12 @@ $(document).ready(function() {
   });
 
   $("#sign-in").on("click", function() {
-    $("#signinModal").show();
-    $("#signupModal").hide();
+    $("#signInContainer").show();
+    $("#signUpContainer").hide();
   });
 
   $("#sign-up").on("click", function() {
-    $("#signupModal").show();
-    $("#signinModal").hide();
+    $("#signUpContainer").show();
+    $("#signInContainer").hide();
   });
 });

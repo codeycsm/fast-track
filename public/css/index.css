@@ -1,15 +1,40 @@
-#signinModal,
-#signupModal {
-  width: 45vw;
-  padding-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
+
+html {
+  background-color: #041B29;
 }
 
-#signinModal h1,
-#signupModal h1 {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+
+.signInButtonContainer {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.makeNickname {
+  margin-top: 2rem !important;
+  margin-bottom: 30px !important;
+}
+
+.makeNicknameText {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#signinModal,
+#signupModal {
+  margin-top: 12rem;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4B6478;
+}
+
+h1 {
+  margin-top: 30px !important;
+  margin-bottom: 0 !important;
+}
+
+ h1, h6 {
+  color: #D9E7F0;
 }
 
 #signinModal button,
