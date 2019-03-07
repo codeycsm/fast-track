@@ -3,7 +3,10 @@ if(!isLoggedIn()) {
     window.location = '/';
 }
 else {
-    $("#timer-container").show();
+
+    let user = getUser();
+    showTimerIfFasting(user.id);
+
 }
 
 let startTime;
@@ -181,4 +184,23 @@ function endOrNewFast() {
         $('#header').text('Fast Duration');
         $('#scheduler').show();
     }
+}
+
+function showTimerIfFasting(id) {
+
+    $.get( `/get-user/${id}`, function( user ) {
+
+        if(user.startTime && user.endTime) {
+            startTime = user.startTime;
+            endTime = user.endTime;
+            startFastTimer();
+        }
+        else {
+            $("#scheduler").show();
+        }
+
+        $("#timer-container").show();
+
+    });
+
 }
