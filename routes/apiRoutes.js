@@ -71,7 +71,6 @@ router.post("/sign-up", function(req, res) {
 });
 
 router.post("/current-fast", function(req, res) {
-
   db.User.update(
     {
       startTime: req.body.startTime ? req.body.startTime : null,
@@ -80,11 +79,11 @@ router.post("/current-fast", function(req, res) {
     {
       where: {
         id: req.body.id
-     }
+      }
     }
   ).then(function(user) {
     res.json(user);
- });
+  });
 });
 
 router.post("/past-data", function(req, res) {
@@ -92,23 +91,22 @@ router.post("/past-data", function(req, res) {
   db.PastFast.findAll({
     where: {
       UserId: user.id
-    }
+    },
+    order: [["endTime", "DESC"]]
   }).then(function(data) {
     res.send(data);
   });
 });
 
-router.post('/past-fast', function(req, res) {
-
+router.post("/past-fast", function(req, res) {
   db.PastFast.create({
     startTime: req.body.startTime,
     endTime: req.body.endTime,
     totalTime: req.body.totalTime,
     UserId: req.body.UserId
-  }).then(function(data){
+  }).then(function(data) {
     res.json(data);
   });
-
 });
 
 module.exports = router;

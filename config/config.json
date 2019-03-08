@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "root",
-    "password": "Password",
+    "password": "bootcamp",
     "database": "fasting_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "nz5a734nuov4uomw",
-    "password": "ufc2pader9di7u4u",
-    "database": "q4novyebwtp1br57",
-    "host": "d6ybckq58s9ru745.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "ag4toeeyhye5wde4",
+    "password": "nay3mepqw3vcuwwu",
+    "database": "rldww07l5dw03in0",
+    "host": "ocvwlym0zv3tcn68.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
