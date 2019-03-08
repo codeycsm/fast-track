@@ -76,7 +76,8 @@ router.post("/past-data", function(req, res) {
   db.PastFast.findAll({
     where: {
       UserId: user.id
-    }
+    },
+    order: [["endTime", "DESC"]]
   }).then(function(data) {
     res.send(data);
   });
