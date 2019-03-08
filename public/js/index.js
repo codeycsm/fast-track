@@ -1,6 +1,9 @@
-let foundUser = findUser();
-if (foundUser) {
+
+if (isLoggedIn()) {
   window.location = "/timer";
+}
+else {
+  $("#signInContainer").show();
 }
 
 $(document).ready(function() {

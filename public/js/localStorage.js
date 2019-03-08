@@ -6,7 +6,7 @@ function saveUser(data) {
   localStorage.setItem("fastTrack", JSON.stringify(user));
 }
 
-function findUser() {
+function isLoggedIn() {
   let user = localStorage.getItem("fastTrack");
   if (!user) {
     return false;

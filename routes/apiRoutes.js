@@ -3,6 +3,21 @@ let express = require("express");
 let router = express.Router();
 let db = require("../models");
 
+router.get("/get-user/:id", function(req, res) {
+
+  db.User.find({
+    where: {
+      id: req.params.id
+    },
+  }).then(function(user) {
+    if (!user) {
+        res.send('User not found');
+    }
+    res.json(user);
+  });
+
+});
+
 // Sign in route
 router.post("/sign-in", function(req, res) {
   let username = req.body.username;
