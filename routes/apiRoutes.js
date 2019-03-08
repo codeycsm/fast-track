@@ -2,47 +2,26 @@
 let express = require("express");
 let router = express.Router();
 let db = require("../models");
-let passport = require("passport-local");
 
-passport.use(
-  new LocalStrategy(function(username, password, done) {
-    User.findOne({ username: username }, function(err, user) {
-      if (err) {
-        return done(err);
-      }
-      if (!user) {
-        return done(null, false);
-      }
-      if (!user.verifyPassword(password)) {
-        return done(null, false);
-      }
-      return done(null, user);
-    });
-  })
-);
 // Sign in route
-router.post(
-  "/sign-in",
-  passport.authenticate("local", { failureRedirect: "/" }),
-  function(req, res) {
-    let username = req.body.username;
-    let isFound = false;
-    db.User.count({
-      where: { username: username }
-    }).then(function(data) {
-      if (data === 0) {
-        res.send(isFound);
-      } else {
-        db.User.findAll({
-          where: { username: username }
-        }).then(function(result) {
-          let user = result[0];
-          res.send(user);
-        });
-      }
-    });
-  }
-);
+router.post("/sign-in", function(req, res) {
+  let username = req.body.username;
+  let isFound = false;
+  db.User.count({
+    where: { username: username }
+  }).then(function(data) {
+    if (data === 0) {
+      res.send(isFound);
+    } else {
+      db.User.findAll({
+        where: { username: username }
+      }).then(function(result) {
+        let user = result[0];
+        res.send(user);
+      });
+    }
+  });
+});
 
 // Sign up route
 router.post("/sign-up", function(req, res) {
