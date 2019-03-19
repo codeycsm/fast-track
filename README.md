@@ -9,6 +9,8 @@ Track your fast here, chose a pre defined length of time to fast or enter your o
 - HTML
 - CSS
 - Materialize
+- JavaScript
+- jQuery
 - Node
 - Express
 - Handlebars
